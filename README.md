@@ -431,6 +431,16 @@ X Y coordinate space, based on the provided screenshot.
 
 <!-- NOTE: This has been generated via update-readme.js -->
 
+- **browser_scroll**
+  - Title: Scroll page
+  - Description: Scroll the page by the specified amounts
+  - Parameters:
+    - `deltaX` (number, optional): Horizontal scroll amount
+    - `deltaY` (number, optional): Vertical scroll amount
+  - Read-only: **true**
+
+<!-- NOTE: This has been generated via update-readme.js -->
+
 - **browser_type**
   - Title: Type text
   - Description: Type text into editable element

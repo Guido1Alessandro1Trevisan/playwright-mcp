@@ -21,6 +21,7 @@ import files from './tools/files.js';
 import install from './tools/install.js';
 import keyboard from './tools/keyboard.js';
 import navigate from './tools/navigate.js';
+import scroll from './tools/scroll.js';
 import network from './tools/network.js';
 import pdf from './tools/pdf.js';
 import snapshot from './tools/snapshot.js';
@@ -40,6 +41,7 @@ export const snapshotTools: Tool<any>[] = [
   ...install,
   ...keyboard(true),
   ...navigate(true),
+  ...scroll,
   ...network,
   ...pdf,
   ...screenshot,
@@ -57,6 +59,7 @@ export const visionTools: Tool<any>[] = [
   ...install,
   ...keyboard(false),
   ...navigate(false),
+  ...scroll,
   ...network,
   ...pdf,
   ...tabs(false),
