@@ -532,14 +532,6 @@ X Y coordinate space, based on the provided screenshot.
   - Parameters: None
   - Read-only: **true**
 
-<!-- NOTE: This has been generated via update-readme.js -->
-
-- **browser_reload**
-  - Title: Reload page
-  - Description: Reload the current page
-  - Parameters: None
-  - Read-only: **true**
-
 </details>
 
 <details>

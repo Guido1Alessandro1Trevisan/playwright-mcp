@@ -97,34 +97,8 @@ const goForward: ToolFactory = captureSnapshot => defineTool({
   },
 });
 
-const reload: ToolFactory = captureSnapshot => defineTool({
-  capability: 'history',
-  schema: {
-    name: 'browser_reload',
-    title: 'Reload page',
-    description: 'Reload the current page',
-    inputSchema: z.object({}),
-    type: 'readOnly',
-  },
-
-  handle: async context => {
-    const tab = await context.ensureTab();
-    await tab.page.reload();
-    const code = [
-      `// Reload current page`,
-      `await page.reload();`,
-    ];
-    return {
-      code,
-      captureSnapshot,
-      waitForNetwork: false,
-    };
-  },
-});
-
 export default (captureSnapshot: boolean) => [
   navigate(captureSnapshot),
   goBack(captureSnapshot),
   goForward(captureSnapshot),
-  reload(captureSnapshot),
 ];
